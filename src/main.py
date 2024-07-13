@@ -3,19 +3,20 @@ from window import *
 from point import *
 from line import *
 from cell import *
+from maze import *
 
 
-def render(window):
-
-    cell.render(window.canvas)
 
 
 def main():
-    
-    print("Hello ponuts")
 
-    win = Window(300, 200)
-    render(win)
+    
+
+    win = Window(640, 480)
+    maze = Maze(8, 8, 40, 40, win, 123)
+    
+    
+    
     win.wait_for_close()
 
 
