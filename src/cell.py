@@ -3,12 +3,12 @@ from point import *
 
 class Cell():
 
-    def __init__(self, x0, y0, x1, y1, window):
+    def __init__(self, x0, y0, x1, y1, win):
         self._x0 = x0
         self._y0 = y0
         self._x1 = x1
         self._y1 = y1
-        self._window = window
+        self._window = win
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True

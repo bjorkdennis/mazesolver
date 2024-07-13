@@ -1,6 +1,7 @@
 import random
 import time
 from cell import *
+import window
 
 class Maze():
 
@@ -22,7 +23,11 @@ class Maze():
         self._draw_cell(0, 0)
         self._draw_cell(self.num_cols - 1, self.num_rows - 1)
         self._break_walls_r(0, 0)
+        self._reset_cells_visited()
 
+    def _reset_cells_visited(self):
+        for i in range(0, len(self._cells)):
+            self._cells[i].visited = False
 
     def _create_cells(self):
         offset_x = 10
